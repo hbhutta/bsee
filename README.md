@@ -13,7 +13,6 @@ For indecisive people (like me) who can't figure out where to go over the holida
 
 ## Endpoints
 - Get a random place to visit in BC
-- Get a random place to visit in a specific city in BC
 
 ## Tasks
 ### Web-scraping (ChatGPT prompts, Google Maps API)
@@ -21,27 +20,36 @@ For indecisive people (like me) who can't figure out where to go over the holida
 2. [X] Enumerate each attraction of each city into an Attraction object
 3. [X] Connect to PostgreSQL database (using psycopg2) 
 4. [X] Automate insertion into database
+   1. [ ] Setup environment variable for Google Maps API key in maps.py
 
-### API
+### API (Golang, AWS API Gateway, AWS Lambda)
 1. Create a function to get a random attraction from the database
    1. [X] Connect to the database
-   2. [X] Write query statement to get random attraction from database
-   3. [ ] Get random attraction as JSON
-   4. [ ] Use Google Maps Place Photos API to get the photo of the place randomly picked from the PostgreSQL database, and send everything back to the front-end
-2. [ ] Create an API
-   1. [ ] Establish router using necessary libraries
-   2. [ ] Convert the above retrieval function into a GET endpoint
-      1. [ ] Convert returned struct into JSON
-3. [ ] Test endpoints with Postman
+   2. [X] Setup environment variables needed for database connection
+   4. [X] Write query statement to get random attraction from database
+      1. [ ] Correct city field if incorrect by comparing with address
+   5. [ ] Use Google Maps Place Photos API to get the photo of the place randomly picked from the PostgreSQL database (with the intent of sending everything back to the front-end) -- but first get the API going on AWS with just the (name, city, address) info
+2. [X] Create an API
+   1. [X] Establish router using necessary libraries
+   2. [X] Convert the above retrieval function into a GET endpoint
+   3. [X] Convert returned struct into JSON
+3. [X] Test endpoints with Postman
+4. [X] Setup AWS API Gateway and AWS Lambda to serve API
+   1. [ ] Create and configure a Lambda function in Golang to perform operations on a DynamoDB table
+   2. [ ] Create a REST API in API Gateway to connect to the Lambda function
+   3. [ ] Create a DynamoDB table and test it with your Lambda function in the console.
+   4. [ ] Deploy your API and test the full setup using Postman in a terminal
 
-### Front-end
-1. [ ] Create a front-end to display the random attraction the client GETs and POSTs
+
+### Front-end (HTML, Javascript, Tailwind)
+1. [ ] Create a front-end to display the random attraction the client GETs
+2. [ ] Create "roll again" option to retrieve a (not necessarily different) attraction
 
 ## Classes
 - Attraction
-    - name
-    - city
-    - address
+    - name: String
+    - city: String
+    - address: String
 
 https://www.gobeyond.dev/packages-as-layers
 

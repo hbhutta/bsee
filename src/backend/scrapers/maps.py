@@ -1,5 +1,4 @@
 GOOGLE_MAPS_API_KEY = 'AIzaSyDgfUC9a0zgeP1VfIYajOJ0uT4I4HiJaLw'
-INPUT_TYPE = 'textquery'
 
 import os
 import requests, json
@@ -25,7 +24,7 @@ for city in cities['cities']:
         for attraction in attractions[city]["attractions"]:
             attraction = str(attraction)
             attraction = attraction.replace(" ", "%20")
-            request = requests.get(f"https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input={attraction}&inputtype={INPUT_TYPE}&fields=name,formatted_address&key={GOOGLE_MAPS_API_KEY}")
+            request = requests.get(f"https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input={attraction}&inputtype=textquery&fields=name,formatted_address&key={GOOGLE_MAPS_API_KEY}")
             try:
                 formatted_address = request.json()["candidates"][0]["formatted_address"]
                 name = request.json()["candidates"][0]["name"]
