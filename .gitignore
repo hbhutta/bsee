@@ -1,3 +1,5 @@
 .env
 /src/backend/api/bootstrap
 /src/backend/api/bootstrap.zip
+/.vscode
+/*/__pycache__
