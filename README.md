@@ -20,7 +20,7 @@ For indecisive people (like me) who can't figure out where to go over the holida
 2. [X] Enumerate each attraction of each city into an Attraction object
 3. [X] Connect to PostgreSQL database (using psycopg2) 
 4. [X] Automate insertion into database
-   1. [ ] Setup environment variable for Google Maps API key in maps.py
+   1. [X] Setup environment variable for Google Maps API key in workers.py
 
 ### API (Golang, AWS API Gateway, AWS Lambda)
 1. Create a function to get a random attraction from the database
@@ -33,25 +33,5 @@ For indecisive people (like me) who can't figure out where to go over the holida
    1. [X] Establish router using necessary libraries
    2. [X] Convert the above retrieval function into a GET endpoint
    3. [X] Convert returned struct into JSON
+   4. [X] Write minimal HTML to display place data bundled with photo
 3. [X] Test endpoints with Postman
-4. [X] Setup AWS API Gateway and AWS Lambda to serve API
-   1. [ ] Create and configure a Lambda function in Golang to perform operations on a DynamoDB table
-   2. [ ] Create a REST API in API Gateway to connect to the Lambda function
-   3. [ ] Create a DynamoDB table and test it with your Lambda function in the console.
-   4. [ ] Deploy your API and test the full setup using Postman in a terminal
-
-
-### Front-end (HTML, Javascript, Tailwind)
-1. [ ] Create a front-end to display the random attraction the client GETs
-2. [ ] Create "roll again" option to retrieve a (not necessarily different) attraction
-
-## Classes
-- Attraction
-    - name: String
-    - city: String
-    - address: String
-
-https://www.gobeyond.dev/packages-as-layers
-
-Question-Driven Development (QDD)
-- Think of an end goal and google your way to success
