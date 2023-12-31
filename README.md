@@ -8,7 +8,6 @@ For indecisive people (like me) who can't figure out where to go over the holida
   - Getting a random entry from the database (GET)
   - Posting a random entry to the database (POST)
 - A simple front-end documents the API endpoints
-- Server made with Golang, web-scraper written ins Python
 - Get each place in each city in the province, and store as a row in a PostgreSQL database
 
 ## Endpoints
