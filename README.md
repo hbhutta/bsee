@@ -4,9 +4,7 @@ For indecisive people (like me) who can't figure out where to go over the holida
 
 ## Description
 - Connects to a PostgreSQL database with data on places of BC gathered using ChatGPT prompts and the Google Maps API
-- The front-end interacts with an API through two end-points:
-  - Getting a random entry from the database (GET)
-  - Posting a random entry to the database (POST)
+- The front-end interacts with an API by getting a random entry from the database (GET)
 - A simple front-end documents the API endpoints
 - Get each place in each city in the province, and store as a row in a PostgreSQL database
 
