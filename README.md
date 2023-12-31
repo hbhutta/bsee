@@ -15,14 +15,14 @@ For indecisive people (like me) who can't figure out where to go over the holida
 - Get a random place to visit in BC
 
 ## Tasks
-### Web-scraping (ChatGPT prompts, Google Maps API)
+### Web-scraping 
 1. [X] Enumerate all cities in B.C. in search-compatible form
 2. [X] Enumerate each attraction of each city into an Attraction object
 3. [X] Connect to PostgreSQL database (using psycopg2) 
 4. [X] Automate insertion into database
    1. [X] Setup environment variable for Google Maps API key in workers.py
 
-### API (Golang, AWS API Gateway, AWS Lambda)
+### API 
 1. Create a function to get a random attraction from the database
    1. [X] Connect to the database
    2. [X] Setup environment variables needed for database connection
