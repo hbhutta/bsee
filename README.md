@@ -24,8 +24,8 @@ For indecisive people (like me) who can't figure out where to go over the holida
    1. [X] Connect to the database
    2. [X] Setup environment variables needed for database connection
    4. [X] Write query statement to get random attraction from database
-      1. [ ] Correct city field if incorrect by comparing with address
-   5. [ ] Use Google Maps Place Photos API to get the photo of the place randomly picked from the PostgreSQL database (with the intent of sending everything back to the front-end) -- but first get the API going on AWS with just the (name, city, address) info
+      1. [X] Correct city field if incorrect by comparing with address
+   5. [X] Use Google Maps Place Photos API to get the photo of the place randomly picked from the PostgreSQL database (with the intent of sending everything back to the front-end) -- but first get the API going on AWS with just the (name, city, address) info
 2. [X] Create an API
    1. [X] Establish router using necessary libraries
    2. [X] Convert the above retrieval function into a GET endpoint
